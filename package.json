@@ -1,0 +1,28 @@
+{
+  "name": "testes-e2e-com-cypress",
+  "version": "1.0.0",
+  "description": "Testes end-to-end utilizando o Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "cy:open": "cypress open",
+    "cy:open:mobile": "cypress open --config viewportWidth=767,viewportHeight=480",
+    "test:mobile": "cypress run --config viewportWidth=767,viewportHeight=480 --spec cypress/integration/authenticatedScenarios.spec.js",
+    "lint": "eslint cypress/**/*.js",
+    "lint:fix": "eslint cypress/**/*.js --fix"
+  },
+  "keywords": [
+    "Cypress",
+    "tests",
+    "e2e"
+  ],
+  "author": "Tiago Lopes",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "10.3.0",
+    "cypress-iframe": "1.0.1",
+    "eslint": "7.32.0",
+    "eslint-plugin-cypress": "2.11.3",
+    "faker": "5.5.3"
+  }
+}
