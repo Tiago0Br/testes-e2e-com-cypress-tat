@@ -28,7 +28,6 @@ describe('CRUD notes and fill Settings form', () => {
   it('Logout from application', {  tags: '@desktop-and-tablet' } , () => {
     cy.visit('/')
 
-    cy.wait(2000)
     cy.contains('nav a', 'Logout').click()
     cy.contains('button', 'Login')
       .should('be.visible')
