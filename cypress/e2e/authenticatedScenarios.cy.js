@@ -24,4 +24,18 @@ describe('CRUD notes and fill Settings form', () => {
       expect(response.statusCode).to.be.equal(200)
     })
   })
+
+  it('Logout from application', {  tags: '@desktop-and-tablet' } , () => {
+    cy.visit('/')
+    if (Cypress.config('viewportWidth') < Cypress.env('viewportWidthBreakpoint')) {
+      cy.get('.navbar-toggle.collapsed')
+        .should('be.visible')
+        .click()
+    }
+
+    cy.contains('nav a', 'Logout').click()
+    cy.contains('button', 'Login')
+      .should('be.visible')
+      .and('have.attr', 'disabled')
+  })
 })

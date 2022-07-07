@@ -8,6 +8,9 @@ module.exports = defineConfig({
     projectId: 'ejnqi2',
     env: {
       viewportWidthBreakpoint: 768
+    },
+    setupNodeEvents(_, config) {
+      require('cypress-grep/src/plugin')(config)
     }
   },
 })

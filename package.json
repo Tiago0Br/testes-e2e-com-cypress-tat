@@ -7,7 +7,7 @@
     "test": "cypress run --record --tag 'desktop'",
     "cy:open": "cypress open",
     "cy:open:mobile": "cypress open --config viewportWidth=767,viewportHeight=480",
-    "test:mobile": "cypress run --record --tag 'tablet' --config viewportWidth=767,viewportHeight=480 --spec cypress/e2e/authenticatedScenarios.cy.js",
+    "test:mobile": "cypress run --record --tag 'tablet' --config viewportWidth=767,viewportHeight=480 --spec cypress/e2e/authenticatedScenarios.cy.js --env grepTags=@desktop-and-tablet",
     "lint": "eslint cypress/**/*.js",
     "lint:fix": "eslint cypress/**/*.js --fix"
   },
@@ -20,6 +20,7 @@
   "license": "MIT",
   "devDependencies": {
     "cypress": "10.3.0",
+    "cypress-grep": "3.0.2",
     "cypress-iframe": "1.0.1",
     "eslint": "7.32.0",
     "eslint-plugin-cypress": "2.11.3",
