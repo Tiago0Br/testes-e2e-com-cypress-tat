@@ -4,10 +4,10 @@
   "description": "Testes end-to-end utilizando o Cypress",
   "main": "index.js",
   "scripts": {
-    "test": "cypress run",
+    "test": "cypress run --record --tag 'desktop'",
     "cy:open": "cypress open",
     "cy:open:mobile": "cypress open --config viewportWidth=767,viewportHeight=480",
-    "test:mobile": "cypress run --config viewportWidth=767,viewportHeight=480 --spec cypress/e2e/authenticatedScenarios.cy.js",
+    "test:mobile": "cypress run --record --tag 'tablet' --config viewportWidth=767,viewportHeight=480 --spec cypress/e2e/authenticatedScenarios.cy.js",
     "lint": "eslint cypress/**/*.js",
     "lint:fix": "eslint cypress/**/*.js --fix"
   },
