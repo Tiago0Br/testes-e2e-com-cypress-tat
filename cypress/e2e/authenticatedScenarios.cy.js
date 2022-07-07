@@ -27,12 +27,8 @@ describe('CRUD notes and fill Settings form', () => {
 
   it('Logout from application', {  tags: '@desktop-and-tablet' } , () => {
     cy.visit('/')
-    if (Cypress.config('viewportWidth') < Cypress.env('viewportWidthBreakpoint')) {
-      cy.get('.navbar-toggle.collapsed')
-        .should('be.visible')
-        .click()
-    }
 
+    cy.wait(2000)
     cy.contains('nav a', 'Logout').click()
     cy.contains('button', 'Login')
       .should('be.visible')
