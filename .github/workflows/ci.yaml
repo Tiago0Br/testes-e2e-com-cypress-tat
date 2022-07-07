@@ -44,5 +44,6 @@ jobs:
         env:
           CYPRESS_USER_EMAIL: ${{ secrets.CYPRESS_USER_EMAIL }}
           CYPRESS_USER_PASSWORD: ${{ secrets.CYPRESS_USER_PASSWORD }}
+          CYPRESS_CREDIT_CARD: ${{ secrets.CYPRESS_CREDIT_CARD }}
         with:
           command: npm run test:mobile
