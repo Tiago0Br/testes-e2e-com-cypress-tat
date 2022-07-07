@@ -1,4 +1,4 @@
-/// <reference types="cypress" />
+/// <reference path='../support/commands.d.ts' />
 const faker = require('faker')
 
 describe('CRUD notes and fill Settings form', () => {
